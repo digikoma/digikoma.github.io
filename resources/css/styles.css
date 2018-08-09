@@ -1,0 +1,162 @@
+/* UNIVERSAL */
+
+html {
+  font-size: 18px;
+}
+
+body {
+  background-image: linear-gradient(to left bottom, #315ea2, #008bcc, #00b4c1, #00d681, #a8eb12);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+
+/* NAVIGATION */
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.nav i {
+  padding: 2rem;
+  transition: color .25s ease-in-out;
+}
+
+.nav i:hover {
+  color: white;
+}
+
+a {
+  color: #A8EB12 !important;
+}
+
+
+
+/* WEBSITES */
+.webcontainer {
+  display: flex;
+  flex-flow: wrap;
+  width: 100%;
+  justify-content: center;
+}
+
+
+.imagecontainer {
+  position: relative;
+  max-width: 40%;
+  margin: 35px;
+  margin-bottom: 35px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #32CD32;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.imagecontainer:hover .overlay {
+  opacity: .96;
+}
+
+.imagecontainer img {
+  width: 100%;
+  z-index: -1;
+}
+
+.webname {
+  color: white;
+  font-size: .8rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: "Roboto";
+  font-weight: 200;
+  letter-spacing: 3px;
+}
+
+ .webname:hover {
+   opacity: 1;
+ }
+
+
+
+
+/* VIDEOS */
+.videos {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding-top: 2rem;
+}
+
+.videos video {
+  padding-bottom: 3rem;
+}
+
+.imagecontainer img{
+  /* padding-bottom: 3rem; */
+}
+
+
+
+/* DESIGN */
+
+.designcontainer {
+   display: flex;
+   flex-flow: wrap;
+   align-items: center;
+   width: 40%;
+ }
+
+.designcontainer img {
+  padding-bottom: 3rem;
+}
+
+
+
+
+/* RESPONSIVE DESIGN */
+
+@media only screen and (max-width: 800px) {
+
+  .webcontainer {
+    flex-flow: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .imagecontainer {
+    max-width: 75%;
+  }
+
+}
+
+
+@media only screen and (max-width: 650px) {
+
+  .imagecontainer {
+    max-width: 100%;
+    margin: 0px;
+    margin-bottom: 25px;
+  }
+
+  .videos video {
+    width: 100%;
+  }
+}
